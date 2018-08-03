@@ -1,18 +1,28 @@
 package charactor;
 
-public class Hero {
-	private String name;
-	private float hp;
+import property.LifePotion;
+import property.MagicPotion;
 
+public class Hero {
+	public String name;
+	public float hp;
+
+	public void useLifePotion(LifePotion lifePotion) {
+		lifePotion.effect();
+	}
+	
+	public void useMagicPotion(property.MagicPotion magicPotion) {
+		magicPotion.effect();
+	}
+	
 	public static void main(String[] args) {
-		ADHero ad = new ADHero();
-		APHero ap = new APHero();
+		Hero hero = new Hero();
+		hero.name = "盖伦";
 		
-		Hero h1 = ad;
-		Hero h2 = ap;
+		LifePotion lifePotion = new LifePotion();
+		MagicPotion magicPotion = new MagicPotion();
 		
-		System.out.println(h1 instanceof ADHero);
-		System.out.println(h2 instanceof APHero);
-		System.out.println(h1 instanceof Hero);
+		hero.useLifePotion(lifePotion);
+		hero.useMagicPotion(magicPotion);
 	}
 }
