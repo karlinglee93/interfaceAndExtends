@@ -2,19 +2,25 @@ package charactor;
 
 public class ADHero extends Hero implements AD {
 
+	int moveSpeed = 400;
+
 	@Override
 	public void physicAttack() {
 		System.out.println("进行物理攻击");
 	}
 
-	// 使用关键字super 显式调用父类带参的构造方法
-	public ADHero(String name) {
-		super(name);
-		System.out.println("AD Hero的构造方法");
+	public int getMoveSpeed() {
+		return this.moveSpeed;
 	}
 
+	public int getMoveSpeedBySuper() {
+		return super.moveSpeed;
+	}
+
+	// 通过super调用父类的moveSpeed属性
 	public static void main(String[] args) {
-		new ADHero("safari");
+		ADHero adHero = new ADHero();
+		System.out.println(adHero.getMoveSpeed());
+		System.out.println(adHero.getMoveSpeedBySuper());
 	}
-
 }
