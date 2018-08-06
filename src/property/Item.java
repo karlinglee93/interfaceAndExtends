@@ -1,5 +1,7 @@
 package property;
 
+import charactor.Hero;
+
 public class Item {
 	String name;
 	int price;
@@ -10,6 +12,23 @@ public class Item {
 
 	public void effect() {
 		System.out.println("物品使用后，可以有效果 ");
+	}
+
+	public String toString() {
+		return this.name + this.price;
+	}
+
+	public void fimalize() {
+		System.out.println(this.name + "对象正在被回收");
+	}
+
+	public boolean equals(Object object) {
+		if (object instanceof Item) {
+			Item item = (Item) object;
+			// this指的是参数Object对象
+			return this.price == item.price;
+		}
+		return false;
 	}
 
 	public static void main(String[] args) {
