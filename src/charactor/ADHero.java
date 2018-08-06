@@ -1,5 +1,8 @@
 package charactor;
 
+import property.Item;
+import property.LifePotion;
+
 public class ADHero extends Hero implements AD {
 
 	int moveSpeed = 400;
@@ -17,10 +20,16 @@ public class ADHero extends Hero implements AD {
 		return super.moveSpeed;
 	}
 
-	// 通过super调用父类的moveSpeed属性
+	// 重写userItem，并在其中调用父类的userItem方法
+	public void useItem(Item item) {
+		System.out.println("ad hero use item");
+		super.useItem(item);
+	}
+
 	public static void main(String[] args) {
 		ADHero adHero = new ADHero();
-		System.out.println(adHero.getMoveSpeed());
-		System.out.println(adHero.getMoveSpeedBySuper());
+		LifePotion lifePotion = new LifePotion();
+
+		adHero.useItem(lifePotion);
 	}
 }
