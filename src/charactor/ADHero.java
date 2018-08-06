@@ -3,7 +3,7 @@ package charactor;
 import property.Item;
 import property.LifePotion;
 
-public class ADHero extends Hero implements AD {
+public abstract class ADHero extends Hero implements AD {
 
 	int moveSpeed = 400;
 
