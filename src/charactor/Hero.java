@@ -24,7 +24,7 @@ public class Hero {
 		Hero h3 = new Hero();
 		h3.hp = 300;
 
-		System.out.println(h1.equals(h2));
-		System.out.println(h1.equals(h3));
+		System.out.println(h1 == h2);
+		System.out.println(h1 == h3);
 	}
 }
