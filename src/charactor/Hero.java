@@ -5,12 +5,22 @@ import property.LifePotion;
 import property.MagicPotion;
 
 public class Hero {
-	public String name;
-	public float hp;
+	String name;
+	float hp;
+	float armor;
+	int moveSpeed;
 
-	//类方法，静态方法
-	//通过类就可以直接调用
-	public static void battleWin() {
-		System.out.println("hero battle win! ");
+	public void useItem(Item item) {
+		System.out.println("hero use item");
+		item.effect();
+	}
+
+	// 准备显式提供无参构造方法的父类
+	public Hero() {
+		System.out.println("Hero的构造方法");
+	}
+
+	public static void main(String[] args) {
+		new Hero();
 	}
 }
