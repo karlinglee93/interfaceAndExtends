@@ -2,9 +2,11 @@ package property;
 
 import charactor.Hero;
 
-public class Item {
+public abstract class Item {
 	String name;
 	int price;
+
+	public abstract boolean disposable();
 
 	public void buy() {
 		System.out.println("购买");
