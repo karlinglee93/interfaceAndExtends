@@ -20,6 +20,12 @@ public class Hero {
 		System.out.println("Hero的构造方法");
 	}
 
+	
+	// 带一个参数的构造方法
+	public Hero(String name) {
+		System.out.println("Hero的有一个参数的构造方法");
+	}
+
 	public static void main(String[] args) {
 		new Hero();
 	}
