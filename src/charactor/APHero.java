@@ -12,4 +12,10 @@ public class APHero extends Hero implements AP, Mortal {
 		System.out.println("APHero 阵亡");
 	}
 
+	@Override
+	public void attack() {
+		// TODO Auto-generated method stub
+		
+	}
+
 }
